@@ -16,8 +16,6 @@ namespace Domain
         public decimal Price { get; set; }
         public int Stock { get; set; }
         public DateTime CreatedDate { get; set; }
-        public DateTime? UpdatedDate { get; set; }
-
         // Navigation Property
         public ICollection<Order> Orders { get; set; } = new List<Order>();
     }

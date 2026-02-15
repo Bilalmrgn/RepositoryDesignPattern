@@ -45,15 +45,12 @@ namespace Persistence.Repositories
             return Remove(model);
 
         }
-        public async Task<bool> Update(T model)
+        public bool Update(T model)
         {
             EntityEntry entityEntry = Table.Update(model);
             return entityEntry.State == EntityState.Modified;
         }
-        public Task<int> SaveChangeAsync()
-        {
-            throw new NotImplementedException();
-        }
+        public async Task<int> SaveChangeAsync() => await _context.SaveChangesAsync();
 
         public bool RemoveRange(List<T> model)
         {

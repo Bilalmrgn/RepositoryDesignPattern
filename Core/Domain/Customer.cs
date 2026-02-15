@@ -6,7 +6,7 @@ using System.Threading.Tasks;
 
 namespace Domain
 {
-    public class Customer
+    public class Customer : BaseEntity
     {
         public Guid Id { get; set; }
 

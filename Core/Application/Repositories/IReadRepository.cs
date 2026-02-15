@@ -14,7 +14,7 @@ namespace Application.Repositories
         IQueryable<T> GetAll();
         IQueryable<T> GetWhere(Expression<Func<T, bool>> method);
         Task<T> GetSingle(Expression<Func<T, bool>> method);//Expression = x => x.Select koşullarını yapmamızı sağlayacak fonksiyondur
-        Task<T> GetByIdAsync(string id);//T yazdık çünkü 1 tane sonuç getiricek. Eğer 1'den fazla sonuç getirme işlemi yapsaydım burada IQueryable tanımlardım ve burada ORM asyn olarak çalıştırır bu yüzden Task yazdık
+        Task<T> GetByIdAsync(string id);
 
         /*
          IQueryable yazmamızın nedeni şudur:
